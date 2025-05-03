@@ -9,12 +9,12 @@ export class FoodService {
   private desserService: DessertService = inject(DessertService);
   private drinkService: DrinkService = inject(DrinkService);
 
-  food!: string;
+  private food!: string;
 
   
   public selectFood(food: string): void {
     this.food = food;
-    console.log(this.food);    
+    console.log('FoodService: ', this.food);    
   }
 
   

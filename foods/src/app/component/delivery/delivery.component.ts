@@ -11,7 +11,14 @@ import { FoodService } from '../../service/food.service';
 export class DeliveryComponent {
   private foodService: FoodService = inject(FoodService);
 
-  constructor(){
-    
+  
+  public refeicao() {
+    this.foodService.selectFood('Macarronada')
+  }
+  public refeicaoSobremesa() {
+    this.foodService.selectFoodAndDessert('Estrognofe', 'Pudim');
+  }
+  public refeicaoDrink() {
+    this.foodService.selectFoodAndDrink('Feijoada', 'Limonada');
   }
 }
